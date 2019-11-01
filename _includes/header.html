@@ -1,36 +1,30 @@
 <!-- Header Start -->
-<header>
+<header class="fixed-top backgroundWhite">
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <!-- header Nav Start -->
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">
-              <img src="{{ site.baseurl }}/img/logo.png" alt="Logo">
-            </a>
-          </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ site.baseurl }}/">Home</a></li>
-                <li><a href="{{ site.baseurl }}/work">Work</a></li>
-                <li><a href="{{ site.baseurl }}/blog">Blog</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="{{ site.baseurl }}/contact">Contact</a></li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/logo.png" alt="Big Neon"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav flex-row ml-md-auto d-md-flex">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ site.baseurl }}/" id="nav-dropdown-01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+              <div class="dropdown-menu" aria-labelledby="nav-dropdown-01">
+                <a class="dropdown-item" href="{{ site.baseurl }}/">Our Story</a>
+                <a class="dropdown-item" href="{{ site.baseurl }}/team">Team</a>
+                <a class="dropdown-item" href="{{ site.baseurl }}/media">Big Neon in the Media</a>
+                <a class="dropdown-item" href="{{ site.baseurl }}/media#media-kit">Press Kit</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/why-big-neon">Why Big Neon</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ site.baseurl }}/blog">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
       </div>
     </div>
   </div>
-</header><!-- header close -->
+</header><!-- Header Close -->

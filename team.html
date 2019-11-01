@@ -1,0 +1,50 @@
+---
+layout: page
+title: Team
+permalink: /team/
+---
+
+<!-- Hero Start -->
+<section id="global-header" class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h1 class="display-1">Big Neon Team</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Horizontal Grid Start -->
+<section id="team" class="horizontalGrid cardGrid container--margin">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+              {% for member in site.data.team.people %}
+                <article class="horizontalGridItem col-sm-6 col-md-4 col-lg-3 col-6">
+                  <div class="cardGridItem" data-quote="{% if member.quote %}true{% else %}false{% endif %}">
+                    <div class="cardBorder">
+                      <figure class="horizontalGridItem__imageContainer image">
+                        <img src="{{ site.baseurl }}{{ member.pic }}" />
+                      </figure>
+                      <div class="horizontalGridItem__copyContainer">
+                        <div class="horizontalGridItem__header">
+                          <h4><span>{{ member.name }}</span> {% if member.quote %}<i class="icon fa fa-caret-down"></i>{% endif %}</h4>
+                          <strong class="display-eyebrow">{{ member.position }}</strong>
+                        </div>
+                        <div class="horizontalGridItem__content">
+                          <strong>Why Big Neon?</strong>
+                          <blockquote><p>{{ member.quote }}</p></blockquote>
+                          {% comment %}https://material.io/components/cards/#behavior{% endcomment %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

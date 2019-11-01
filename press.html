@@ -1,0 +1,170 @@
+---
+layout: page
+title: Media
+permalink: /media/
+---
+
+<!-- Hero Start -->
+<section id="global-header" class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h1 class="display-1">Press & Media</h1>
+                    <div class="hero__copy post"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Press Release Start -->
+<div id="press-releases" class="container--margin">
+  <!-- Headliner Start -->
+  <section class="headliner">
+      <div class="container">
+          <div class="content text-center">
+              <div class="row">
+                  <div class="col-md-12">
+                      <h2 class="display-2">In the press</h2>
+                      <div class="post">
+                        <p>&nbsp;</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Horizontal Grid Start -->
+  <section class="horizontalGrid cardGrid">
+      <div class="container">
+          <div class="row">
+              {% assign sorted_press = (site.data.press.articles | sort: 'date') %}
+              {% for press in sorted_press reversed %}
+              <article class="horizontalGridItem col-sm-6 col-md-6 col-lg-4 col-12">
+                <div class="cardGridItem">
+                    <div class="horizontalGridItem__imageContainer">
+                      <figure class="horizontalGridItem__image image">
+                        <img src="{{ site.baseurl }}/{{ press.image }}" alt="{{ press.name }}" />
+                      </figure>
+                    </div>
+                    <div class="horizontalGridItem__copyContainer">
+                      <h4 class="display-eyebrow">{{ press.date | date: '%B %d, %Y' }}</h4>
+                      <div class="horizontalGridItem__copy">
+                        {{ press.lead }}
+                      </div>
+                    </div>
+                    {% if press.url %}<a class="cta" target="_blank" href="{{ press.url }}">Read More</a>{% endif %}
+                </div>
+              </article>
+              {% endfor %}
+          </div>
+      </div>
+  </section>
+</div>
+
+<!-- Media Kit Start -->
+<div id="media-kit">
+  <!-- Headliner Start -->
+  <section class="headliner container--margin backgroundWhite">
+      <div class="container">
+          <div class="content text-center">
+              <div class="row">
+                  <div class="col-md-12">
+                      <h2 class="display-2">Media resources</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- Intro Start -->
+  <section class="container--margin backgroundWhite">
+      <div class="container">
+        <div class="content flex-center">
+          <div class="row">
+            <div class="col-md-6">
+                <h3>Writing about Big Neon?</h3>
+                <p>We’ve got you covered. Use this:</p>
+            </div>
+            <div class="col-md-6">
+                <blockquote><p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est."</p></blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Intro Start -->
+  <section class="container--margin">
+      <div class="container">
+        <div class="content flex-center">
+          <div class="row">
+            <div class="col-md-6">
+                <h3>Logos</h3>
+                <p>The Big Neon marks include the Big Neon name and logo. Please do not modify the marks or use them in a confusing way, including suggesting sponsorship or endorsement by Big Neon, or in a way that confuses Big Neon with another brand (including your own). If you are unsure, please feel free to contact us at press@bigneon.com.</p>
+                <p><a class="download" href="#">Download All</a></p>
+            </div>
+            <div class="col-md-6">
+                <figure class="image">
+                  <img src="{{ site.baseurl }}/img/press/logos.png" />
+                </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Intro Start -->
+  <section class="container--margin backgroundWhite">
+      <div class="container">
+        <div class="content flex-center">
+          <div class="row">
+            <div class="col-md-6">
+                <h3>Leadership photos</h3>
+                <p>Here you’ll find high-resolution photos of our fearless leadership team, including executives across the organization. Use for articles, speaking opps, or general inspiration.</p>
+                <p><a class="download" href="#">Download All</a></p>
+            </div>
+            <div class="col-md-6">
+                <figure class="image">
+                  <img src="{{ site.baseurl }}/img/press/leadership.jpg" />
+                </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- Intro Start -->
+  <section class="container--margin">
+      <div class="container">
+        <div class="content flex-center">
+          <div class="row">
+            <div class="col-md-6">
+                <h3>Brand guidelines</h3>
+                <p>Read for logo, color and typeface guidelines.</p>
+                <p><a class="download" href="{{ site.baseurl }}/img/press/Big-Neon-Brand-Guidelines.pdf">Download Guide</a></p>
+            </div>
+            <div class="col-md-6">
+                <figure class="image">
+                  <img src="{{ site.baseurl }}/img/press/brand-guidelines.jpg" />
+                </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>
+
+<!-- Call to Action Start -->
+<section id="call-to-action">
+  <div class="container">
+  <div class="content text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="block">
+          <h1 class="display-2">Have a press inquiry?</h1>
+          <p>Send us an e-mail.</p>
+          <a class="btn btn-primary btn-lg animated fadeInUp" href="mailto:press@bigneon.com">press@bigneon.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>

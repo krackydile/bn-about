@@ -1,50 +1,35 @@
 $(document).ready(function(){
 
-
-	$("#portfolio-contant-active").mixItUp();
-
-
-	$("#testimonial-slider").owlCarousel({
-	    paginationSpeed : 500,      
-	    singleItem:true,
-	    autoPlay: 3000,
+	// Tabbed steps
+	$('.steps .step h4').click(function(e){
+		e.preventDefault();
+		var image = $(this).parents('.step').data('target');
+		var $imageContainer = $(this).parents('.steps__copyContainer').siblings('.steps__imageContainer');
+		$(this).parents('.step').siblings().removeClass('is-active');
+		$(this).parents('.step').addClass('is-active');
+		$imageContainer.children('.step__image').removeClass('is-active');
+		$imageContainer.children('.step__image[data-name="' + image + '"]').addClass('is-active');
 	});
 
-
-
-
-	$("#clients-logo").owlCarousel({
-		autoPlay: 3000,
-		items : 5,
-		itemsDesktop : [1199,5],
-		itemsDesktopSmall : [979,5],
-	});
-
-	$("#works-logo").owlCarousel({
-		autoPlay: 3000,
-		items : 5,
-		itemsDesktop : [1199,5],
-		itemsDesktopSmall : [979,5],
-	});
-
-
-	// google map
-		var map;
-		function initMap() {
-		  map = new google.maps.Map(document.getElementById('map'), {
-		    center: {lat: -34.397, lng: 150.644},
-		    zoom: 8
-		  });
+  // Expand team tiles
+	$('#team .cardGridItem[data-quote="true"]').click(function(){
+		if( $(this).hasClass('active') ){
+			$('#team .cardGridItem').removeClass('active');
+		} else {
+			$('#team .cardGridItem').removeClass('active');
+			$(this).addClass('active');
 		}
+	});
 
+	// Scroll to anchor
+	if(window.location.hash) {
+	  var hash = window.location.hash;
+	  var headerOffset = $('header').height();
+	  $("html, body").animate({ scrollTop: $(hash).offset().top - headerOffset }, "slow");
+	}
 
-	// Counter
-
-	$('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
-
+	// Video aspect ratio
+  $('.videoContainer iframe').liquidFrame();
 
 });
 
