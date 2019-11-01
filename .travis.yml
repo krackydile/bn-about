@@ -1,7 +1,7 @@
 language: ruby
 rvm:
   - 2.6.3
-
+install: gem install
 script: ./scripts/build-ci.sh
 
 # branch whitelist, only for GitHub Pages
