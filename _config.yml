@@ -1,5 +1,6 @@
 
 exclude:
+  - "vendor"
   - "/vendor/"
   - "Gemfile"
   - "Gemfile.lock"
