@@ -604,9 +604,6 @@ footer .footbar-copyright {
   .steps + .headliner h4 {
     font-size: 2.4rem;
   }
-  .steps + .headliner .flex-reverse .row {
-    flex-direction: column-reverse;
-  }
 }
 
 /*---------------------------------------------
