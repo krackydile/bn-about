@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	// Tabbed steps
-	$('.steps .step h4').click(function(e){
+	$('.steps:not(".steps--Single") .step h4').click(function(e){
 		e.preventDefault();
 		var image = $(this).parents('.step').data('target');
 		var $imageContainer = $(this).parents('.steps__copyContainer').siblings('.steps__imageContainer');

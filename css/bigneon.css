@@ -526,7 +526,11 @@ footer .footbar-copyright {
 .steps .steps__copyContainer ul li:not(:last-child) {
   border-bottom: .0625rem solid #979797;
 }
-.steps .steps__copyContainer h4 {
+
+.steps .steps__copyContainer p {
+  margin-bottom: 0;
+}
+.step h4 {
   font-family: 'TTCommons-Regular', sans-serif;
   cursor: pointer;
   flex-wrap: nowrap;
@@ -536,13 +540,17 @@ footer .footbar-copyright {
   padding-left: 5rem;
   position: relative;
 }
-.steps .steps__copyContainer .is-active h4 {
+.step.is-active h4 {
   font-family: 'TTCommons-Bold', sans-serif;
 }
-.steps .steps__copyContainer .step h4:hover {
+.step h4:hover {
   color: #fd19b1;
 }
-.steps .steps__copyContainer .step h4:before {
+.steps--Single .step h4:hover {
+  color: inherit;
+  cursor: initial;
+}
+.step h4:before {
   width: 1.5rem;
   height: 1.5rem;
   border-bottom: 2px solid #fd19b1;
@@ -555,8 +563,12 @@ footer .footbar-copyright {
   top: 50%;
   margin-top: -0.75rem;
 }
-.steps .steps__copyContainer .step.is-active h4:before {
+.step.is-active h4:before {
   transform: rotate(225deg);
+}
+.steps--Single .step h4:before,
+.steps--Single .step.is-active h4:before {
+  transform: rotate(315deg);
 }
 .steps .steps__imageContainer .step__image {
   display: none;
@@ -581,8 +593,19 @@ footer .footbar-copyright {
   .steps .steps__imageContainer {
     display: none;
   }
-  .steps .steps__copyContainer h4 {
+  .steps--Single .steps__imageContainer {
+    display: block;
+  }
+  .steps .steps__imageContainer .step__image {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .steps .steps__copyContainer h4,
+  .steps + .headliner h4 {
     font-size: 2.4rem;
+  }
+  .steps + .headliner .flex-reverse .row {
+    flex-direction: column-reverse;
   }
 }
 
