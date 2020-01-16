@@ -267,7 +267,6 @@ header .navbar-light .navbar-toggler-icon {
   Footer
 -----------------------------------------------*/
 footer {
-  padding-top: 6rem;
   padding-bottom: 2rem;
   font-size: 1.6rem;
 }
@@ -293,13 +292,20 @@ footer .footbar-footer p {
 footer .footbar-footer .footer__links--social {
   text-transform: uppercase;
 }
-footer .footer__category + .footer__category,
+footer .footer__category,
 footer aside {
   margin-top: 4rem;
 }
+footer .footbar-copyright {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-@media (min-width: 600px) {
-  footer .footer__category + .footer__category {
+@media (min-width: 768px) {
+  footer {
+      padding-top: 6rem;
+  }
+  footer .footer__category {
     margin-top: 0;
   }
 }
