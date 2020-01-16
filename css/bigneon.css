@@ -358,6 +358,26 @@ footer .footbar-copyright {
   padding-bottom: 7.5rem;
   position: relative;
 }
+#global-header.hero--withVideo {
+  overflow: hidden;
+}
+#global-header.hero--withVideo .block,
+#global-header.hero--withVideo .row > [class*="col"] {
+  position: static !important;
+}
+#global-header.hero--withVideo h1 {
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 5px rgba(0,0,0,0.30);
+}
+#global-header.hero--withVideo video {
+  position: absolute;
+  width: 400%;
+  top: -33%;
+  left: 0;
+  
+  z-index: 1;
+}
 #global-header.hero--withImage {
   padding-bottom: 0;
   margin-bottom: 4rem;
@@ -374,10 +394,12 @@ footer .footbar-copyright {
     position: absolute;
     transform: translateX(-50%);
     width: 200vw;
+    z-index: 3;
 }
 #global-header.hero--withImage .block img {
   position: relative;
   max-width: 100%;
+  z-index: 4;
 }
 #global-header .block {
   color: #fff;
