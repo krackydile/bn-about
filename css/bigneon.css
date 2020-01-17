@@ -312,7 +312,7 @@ footer .footbar-copyright {
 
 @media (min-width: 768px) {
   footer {
-      padding-top: 3rem;
+      padding-top: 4rem;
   }
   footer .footer__category {
     margin-top: 0;
@@ -757,10 +757,6 @@ footer .footbar-copyright {
 /*---------------------------------------------
   Page: About Us
 -----------------------------------------------*/
-#clients-logos {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
 #clients-logos div[class*="col"] {
   justify-content: center;
   align-self: center;
@@ -774,4 +770,10 @@ footer .footbar-copyright {
 #guiding-principles {
   padding: 12rem 0;
   text-align: center;
+}
+@media (min-width: 768px) {
+  #clients-logos {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
 }
