@@ -376,6 +376,16 @@ footer .footbar-copyright {
   padding-bottom: 7.5rem;
   position: relative;
 }
+#global-header.hero--full {
+  height: 100vh;
+}
+#global-header.hero--full .display-1 {
+  position: absolute !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: -60px;
+}
 #global-header.hero--withVideo {
   overflow: hidden;
 }
@@ -399,13 +409,23 @@ footer .footbar-copyright {
   position: relative;
   z-index: 3;
 }
-#global-header.hero--withVideo video {
+#global-header.hero--withVideo .hero__videobox {
   position: absolute;
-  width: 200%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#global-header.hero--withVideo .hero__video {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  left: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  z-index: 1;
+  min-height: 100%;
+  transform: translate(-50%,-50%);
 }
 #global-header.hero--withImage {
   padding-bottom: 0;

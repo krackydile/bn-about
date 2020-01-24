@@ -5,15 +5,17 @@ permalink: /
 ---
 
 <!-- Slider Start -->
-<section id="global-header" class="hero hero--withVideo">
+<section id="global-header" class="hero hero--withVideo hero--full">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="block">
                     <h1 class="display-1">Our Story</h1>
-                    <video loop autoplay>
-                      <source src="{{ site.baseurl }}/img/about/hero.mp4" type="video/mp4">
-                    </video>
+                    <div class="hero__videobox">
+                      <video class="hero__video" autoplay muted playsinline loop>
+                        <source src="{{ site.baseurl }}/img/about/hero.mp4" type="video/mp4">
+                      </video>
+                    </div>
                 </div>
             </div>
         </div>
