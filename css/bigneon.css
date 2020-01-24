@@ -296,7 +296,7 @@ footer .footbar-header .footer__links--app img {
   max-height: 4rem;
 }
 footer .footbar-footer {
-  border-top: 1px solid #ebedf0;
+  border-top: 1px solid #e8eaee;
   padding-top: 2rem;
   margin-top: 2rem;
 }
@@ -552,10 +552,9 @@ footer .footbar-copyright {
   display: none;
   margin-bottom: 3rem;
 }
-.steps .steps__copyContainer ul li:not(:last-child) {
+.steps.steps--bordered .steps__copyContainer ul li:not(:last-child) {
   border-bottom: .0625rem solid #979797;
 }
-
 .steps .steps__copyContainer p {
   margin-bottom: 0;
 }
@@ -809,5 +808,20 @@ footer .footbar-copyright {
 @media (max-width: 767px){
   #intro {
     text-align: center;
+  }
+}
+
+/*---------------------------------------------
+  Page: Why Big Neon
+-----------------------------------------------*/
+@media (max-width: 767px) {
+  #benefits {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+  }
+  #benefits > section + section {
+    border-top: .0625rem solid #e8eaee;
+    padding-top: 5rem;
+    margin-top: 5rem;
   }
 }
