@@ -27,7 +27,7 @@ permalink: /media/
   <section class="horizontalGrid cardGrid">
       <div class="container">
           <div class="row">
-              {% assign sorted_press = (site.data.press.articles | sort: 'date') %}
+              {% assign sorted_press = site.data.press.articles | sort: 'date' %}
               {% for press in sorted_press reversed %}
               <article class="horizontalGridItem col-sm-6 col-md-6 col-lg-4 col-12">
                 <div class="cardGridItem">
