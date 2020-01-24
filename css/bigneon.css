@@ -203,6 +203,10 @@ body {
 /*---------------------------------------------
   Header
 -----------------------------------------------*/
+header .navbar {
+  padding-left: 0;
+  padding-right: 0;
+}
 header .navbar-brand {
   padding-top: 1rem;
   padding-bottom: 1rem;
