@@ -806,3 +806,8 @@ footer .footbar-copyright {
     padding-bottom: 10rem;
   }
 }
+@media (max-width: 767px){
+  #intro {
+    text-align: center;
+  }
+}
