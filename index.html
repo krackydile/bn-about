@@ -1,75 +1,32 @@
 ---
 layout: page
-title: About Us
+title: Our Story
 permalink: /
+hero: full
 ---
 
-<!-- Slider Start -->
-<section id="global-header" class="hero hero--withVideo hero--full">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="block">
-                    <h1 class="display-1">Our Story</h1>
-                    <div class="hero__videobox">
-                      <video class="hero__video" autoplay muted playsinline loop>
-                        <source src="{{ site.baseurl }}/img/about/hero.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% include hero.html %}
 
 <!-- Intro Start -->
 <section id="intro">
+    {% for item in site.data.about.intro.list %}
+    {% assign remainder = forloop.index | modulo: 2 %}
     <div class="container">
-        <div class="content flex-center">
+        <div class="content flex-center{% if remainder == 0 %} flex-reverse{% endif %}">
             <div class="row">
                 <div class="col-md-6">
                   <figure class="image">
-                      <img src="{{ site.baseurl }}/img/about/heart.jpg" />
+                      <img src="{{ item.image }}" />
                   </figure>
                 </div>
                 <div class="col-md-6">
-                  <h3>What is Big Neon?</h3>
-                  <p>Big Neon is a modern, mobile first platform that moves beyond just selling tickets to help leading music promoters increase their revenue and compete.</p>
-                  <p>The company is founded by Dan Teree, who co-founded Ticketfly, which was sold to Pandora in 2015 for $450M. Many in the industry have called Big Neon the "spiritual successor" to Ticketfly.</p>
+                  <h3>{{ item.heading }}</h3>
+                  {{ item.post | markdownify }}
                 </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="content flex-center flex-reverse">
-            <div class="row">
-                <div class="col-md-6">
-                  <figure class="image">
-                      <img src="{{ site.baseurl }}/img/about/mobile.jpg" />
-                  </figure>
-                </div>
-                <div class="col-md-6">
-                  <h3>Modern, Mobile Ticketing</h3>
-                  <p>Big Neon ushers in the modern era of pure mobile ticketing where beautiful apps replace outmoded hard tickets and long will call lines. With Big Neon, promoters capture more marketing data by giving concert goers a superior mobile experience through seamless ticket transfers and tailored push notifications.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="content flex-center">
-            <div class="row">
-                <div class="col-md-6">
-                  <figure class="image">
-                      <img src="{{ site.baseurl }}/img/about/blockchain.jpg" />
-                  </figure>
-                </div>
-                <div class="col-md-6">
-                  <h3>Blockchain-enabled</h3>
-                  <p>Eventually, Big Neon intends to leverage the <a href="http://www.tari.com">Tari blockchain protocol</a> so that promoters can capture revenues currently lost in the secondary market. Big Neon’s aim is nothing short of modernizing the way ticketing is done to help our clients compete.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
 </section>
 
 <!-- Client Logos Start -->
@@ -78,53 +35,20 @@ permalink: /
   <div class="content text-center">
         <div class="row">
           <div class="col-md-12">
-            <h2>Be in good company</h2>
+            <h2>{{ site.data.about.clients.heading }}</h2>
             <div class="post">
-              <p>Big Neon clients include promoters across the U.S., including:</p>
+              {{ site.data.about.clients.intro | markdownify }}
             </div>
           </div>
         </div>
         <div class="row">
+          {% for item in site.data.about.clients.list %}
           <div class="col-md-3 col-sm-6 col-6">
             <div class="clients-logo-img">
-              <a href="https://themidwaysf.com"><img src="{{ site.baseurl }}/img/clients/the-midway.png" alt="The Midway"></a>
+              <a href="{{ item.url }}"><img src="{{ item.logo }}" alt="{{ item.name }}"></a>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-6">
-            <div class="clients-logo-img">
-              <a href="http://www.bimbos365club.com"><img src="{{ site.baseurl }}/img/clients/bimbos.png" alt="Bimbo's 365 Club"></a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-6">
-            <div class="clients-logo-img">
-              <a href="https://publicsf.com"><img src="{{ site.baseurl }}/img/clients/public-works.png" alt="Public Works"></a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-6">
-            <div class="clients-logo-img">
-              <a href="https://www.thesatellitela.com"><img src="{{ site.baseurl }}/img/clients/the-satellite.png" alt="The Satellite"></a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-6">
-            <div class="clients-logo-img">
-              <a href="https://www.ustreetmusichall.com"><img src="{{ site.baseurl }}/img/clients/u-street.png" alt="U Street Presents"></a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-6">
-            <div class="clients-logo-img">
-              <a href="https://www.gasmonkeybarngrill.com"><img src="{{ site.baseurl }}/img/clients/gas-monkey.png" alt="Gas Monkey"></a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-6">
-            <div class="clients-logo-img">
-              <a href="https://www.discoveryventura.com"><img src="{{ site.baseurl }}/img/clients/discovery-ventura.png" alt="Discovery Ventura"></a>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 col-6">
-            <div class="clients-logo-img">
-              <a href="https://reverbconcerts.com"><img src="{{ site.baseurl }}/img/clients/reverb-concerts.png" alt="Reverb Concerts"></a>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       </div>
       </div>
@@ -136,41 +60,21 @@ permalink: /
 <section id="guiding-principles" class="backgroundWhite">
   <div class="container">
   <div class="content text-center">
-    <h2 class="display-2">What's our guiding principles?</h2>
+    <h2 class="display-2">{{ site.data.about.principles.heading }}</h2>
     <div class="post">
-        <p>You can’t be all things to all people. Big Neon is committed to serving only <u>one</u> client: the music promoter. To ensure focus and deliver the innovation that the music industry craves, Big Neon follows four guiding principles:</p>
+        {{ site.data.about.principles.intro | markdownify }}
     </div>
     <div class="row">
-      <div class="col-sm-6 col-md-4 offset-md-2">
+      {% for item in site.data.about.principles.list %}
+      {% assign remainder = forloop.index | modulo: 2 %}
+      <div class="col-sm-6 col-md-4{% if remainder == 1 %} offset-md-2{% endif %}">
         <div class="service-item">
-          <img src="{{ site.baseurl }}/img/about/principle-music.png" />
-          <h3>Dedicated to Music</h3>
-          <p>Big Neon serves one master - the music promoter. And everyone on the Big Neon team shares an abiding passion for building tools that help promoters succeed, and this includes making the fan experience memorable and fun.</p>
+          <img src="{{ item.icon }}" />
+          <h3>{{ item.heading }}</h3>
+          {{ item.post | markdownify }}
         </div>
       </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="service-item">
-          <img src="{{ site.baseurl }}/img/about/principle-listen.png" />
-          <h3>Committed to Listening</h3>
-          <p>To improve the way business is done, you need to listen. Big Neon actively collaborates with our clients, ensuring we really solve the problems unique to our industry.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6 col-md-4 offset-md-2">
-        <div class="service-item">
-          <img src="{{ site.baseurl }}/img/about/principle-mobile.png" />
-          <h3>Modern and Mobile</h3>
-          <p>Big Neon is "mobile first," which means everything created is designed to work beautifully on mobile devices. Whether you’re a promoter using our "Studio" tools or a fan using our app to transfer tickets to friends, you’ll notice a modern "look and feel" that is easy to use and helps you get your work (or play!) on.</p>
-        </div>
-      </div>
-      <div class="col-sm-6 col-md-4">
-        <div class="service-item">
-          <img src="{{ site.baseurl }}/img/about/principle-tickets.png" />
-          <h3>Beyond Tickets</h3>
-          <p>Selling beer to increase per caps and successfully bidding for talent are critical parts of the live music business. Big Neon moves beyond tickets to deliver features that help music promoters across their entire business.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
   </div>

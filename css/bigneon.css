@@ -624,6 +624,21 @@ footer .footbar-copyright {
   .steps--Single .steps__imageContainer {
     display: block;
   }
+  .steps--Single h4 {
+    padding-left: 0;
+  }
+  .steps--Single h4:before {
+    display: none;
+  }
+  .steps--Single .steps__copyContainer {
+    text-align: center;
+  }
+  .steps--Single .step {
+    border-top: 1px solid #000;
+  }
+  .steps--Single .step:first-child {
+    margin-top: 2rem;
+  }
   .steps .steps__imageContainer .step__image {
     padding-left: 0 !important;
     padding-right: 0 !important;

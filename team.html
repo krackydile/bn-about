@@ -1,47 +1,31 @@
 ---
 layout: page
-title: Team
+title: Big Neon Team
 permalink: /team/
 ---
 
-<!-- Slider Start -->
-<section id="global-header" class="hero hero--withVideo">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="block">
-                    <h1 class="display-1">Big Neon Team</h1>
-                    <div class="hero__videobox">
-                      <video class="hero__video" autoplay muted playsinline loop>
-                        <source src="{{ site.baseurl }}/img/about/hero.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% include hero.html %}
 
 <!-- Horizontal Grid Start -->
 <section id="team" class="horizontalGrid cardGrid container--margin">
     <div class="container">
         <div class="content">
             <div class="row">
-              {% for member in site.data.team.people %}
+              {% for item in site.data.team.list %}
                 <article class="horizontalGridItem col-sm-6 col-md-4 col-lg-3 col-6">
-                  <div class="cardGridItem" data-quote="{% if member.quote %}true{% else %}false{% endif %}">
+                  <div class="cardGridItem" data-quote="{% if item.quote %}true{% else %}false{% endif %}">
                     <div class="cardBorder">
                       <figure class="horizontalGridItem__imageContainer image">
-                        <img src="{{ site.baseurl }}{{ member.pic }}" />
+                        <img src="{{ item.pic }}" />
                       </figure>
                       <div class="horizontalGridItem__copyContainer">
                         <div class="horizontalGridItem__header">
-                          <h4><span>{{ member.name }}</span> {% if member.quote %}<i class="icon fa fa-caret-down"></i>{% endif %}</h4>
-                          <strong class="display-eyebrow">{{ member.position }}</strong>
+                          <h4><span>{{ item.name }}</span> {% if item.quote %}<i class="icon fa fa-caret-down"></i>{% endif %}</h4>
+                          <strong class="display-eyebrow">{{ item.position }}</strong>
                         </div>
                         <div class="horizontalGridItem__content">
                           <strong>Why Big Neon?</strong>
-                          <blockquote><p>{{ member.quote }}</p></blockquote>
+                          <blockquote><p>{{ item.quote }}</p></blockquote>
                           {% comment %}https://material.io/components/cards/#behavior{% endcomment %}
                         </div>
                       </div>

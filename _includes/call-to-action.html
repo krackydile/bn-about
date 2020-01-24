@@ -5,9 +5,13 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block">
-          <h1 class="display-2">Let's get started</h1>
-          <p>If you want modern, mobile ticketing backed by a company committed to moving beyond tickets, let’s discuss.</p>
-          <a class="btn btn-primary btn-lg animated fadeInUp drift-open-chat" href="#contact-us" >Contact Us</a>
+          <h1 class="display-2">{{ site.data.cta.heading }}</h1>
+          <p>{{ site.data.cta.post }}</p>
+          {% if site.data.cta.url == "Bot" %}
+            <a class="btn btn-primary btn-lg animated fadeInUp drift-open-chat" href="#">{{ site.data.cta.button }}</a>
+          {% else %}
+            <a class="btn btn-primary btn-lg animated fadeInUp" href="{{ site.data.cta.url }}" >{{ site.data.cta.button }}</a>
+          {% endif %}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ layout: post
 title: Hello World
 #subtitle: Welcome to Tari
 author: Dan Teree
-thumbnail: img/blog/thumbnail-2018-12-01.jpg
+thumbnail: /img/blog/thumbnail-2018-12-01.jpg
 lead: Welcome to the Big Neon blog. We’re excited to share what we’re building and how we believe it will change the ticketing industry.
 ---
 

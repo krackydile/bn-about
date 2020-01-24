@@ -1,0 +1,28 @@
+list:
+- heading: Modern, Mobile Ticketing
+  video: /img/why/benefit-ticketing.mp4 
+  post: >
+    Brand new and built for the future.
+  steps:
+    - step: Mobile-first design
+    - step: Mobile marketing tools Talent buyer focused analytics
+    - step: Push notifications that increase per caps
+- heading: Grow Your Per Caps
+  video: /img/why/benefit-caps.mp4 
+  post: >
+    Per caps make or break a show. Big Neon drives your bar and ancillary revenue.
+  steps:
+    - step: Mobile drink specials
+    - step: Last call notifications
+    - step: Onsite up-selling
+- heading: Music Focused Integrations
+  video: /img/why/benefit-integrations.mp4 
+  post: >
+    Powerful integrations improve talent buying, consumer marketing and ticket distribution.
+- heading: Buy Talent Better
+  video: /img/why/benefit-dashboard.mp4 
+  post: >
+    Talent is your biggest expense. Buy smarter with historical ticket and bar sales.
+  steps:
+    - step: Measure ad spend impact
+    - step: Track ticket transfer activity and no show rates Review historicals with Prism

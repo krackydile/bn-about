@@ -4,136 +4,42 @@ title: Why Big Neon
 permalink: /why-big-neon/
 ---
 
-<!-- Slider Start -->
-<section id="global-header" class="hero hero--withVideo">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="block">
-                    <h1 class="display-1">Why Big Neon</h1>
-                    <div class="hero__videobox">
-                      <video class="hero__video" autoplay muted playsinline loop>
-                          <source src="{{ site.baseurl }}/img/about/hero.mp4" type="video/mp4">
-                      </video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{% include hero.html %}
 
-<!-- Benefits -->
+<!-- Benefits Start -->
 <div id="benefits" class="backgroundWhite">
+
+    {% for item in site.data.why.list %}
+    {% assign remainder = forloop.index | modulo: 2 %}
     <!-- Steps Start -->
     <section class="steps steps--Single">
-        <div class="container">
-            <div class="content flex-center flex-reverse">
+        <div class="container container--margin">
+            <div class="content flex-center{% if remainder == 1 %} flex-reverse{% endif %}">
                 <div class="row">
                     <div class="col-md-6 steps__imageContainer">
                         <figure class="step__image image is-active" data-name="image-0">
                             <video autoplay loop>
-                              <source src="{{ site.baseurl }}/img/why/benefit-ticketing.mp4" type="video/mp4">
+                              <source src="{{ item.video }}" type="video/mp4">
                             </video>
                         </figure>
                     </div>
                     <div class="col-md-6 steps__copyContainer">
-                        <h3>Modern, Mobile Ticketing</h3>
-                        <p>Brand new and built for the future.</p>
+                        <h3>{{ item.heading }}</h3>
+                        {{ item.post | markdownify }}
                         <ul>
+                            {% for step in item.steps %}
                             <li class="step is-active" data-target="image-0">
-                                <h4>Mobile-first design</h4>
+                                <h4>{{ step.step }}</h4>
                             </li>
-                            <li class="step is-active" data-target="image-0">
-                                <h4>Mobile marketing tools Talent buyer focused analytics</h4>
-                            </li>
-                            <li class="step is-active" data-target="image-0">
-                                <h4>Push notifications that increase per caps</h4>
-                            </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Steps Start -->
-    <section class="steps steps--Single">
-        <div class="container">
-            <div class="content flex-center">
-                <div class="row">
-                    <div class="col-md-6 steps__imageContainer">
-                        <figure class="step__image image is-active" data-target="image-0">
-                            <video autoplay loop>
-                              <source src="{{ site.baseurl }}/img/why/benefit-caps.mp4" type="video/mp4">
-                            </video>
-                        </figure>
-                    </div>
-                    <div class="col-md-6 steps__copyContainer">
-                        <h3>Grow Your Per Caps</h3>
-                        <p>Per caps make or break a show. Big Neon drives your bar and ancillary revenue.</p>
-                        <ul>
-                            <li class="step is-active" data-target="image-0">
-                                <h4>Mobile drink specials</h4>
-                            </li>
-                            <li class="step is-active" data-target="image-0">
-                                <h4>Last call notifications</h4>
-                            </li>
-                            <li class="step is-active" data-target="image-0">
-                                <h4>Onsite up-selling</h4>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Headliner Start -->
-    <section class="headliner">
-        <div class="container">
-            <div class="content flex-center flex-reverse">
-                <div class="row">
-                    <div class="col-md-6">
-                      <figure class="step__image image">
-                        <video autoplay loop>
-                          <source src="{{ site.baseurl }}/img/why/benefit-integrations.mp4" type="video/mp4">
-                        </video>
-                      </figure>
-                    </div>
-                    <div class="col-md-6">
-                        <h3>Music Focused Integrations</h3>
-                        <p>Powerful integrations improve talent buying, consumer marketing and ticket distribution</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Steps Start -->
-    <section class="steps steps--Single">
-        <div class="container">
-            <div class="content flex-center">
-                <div class="row">
-                    <div class="col-md-6 steps__imageContainer">
-                        <figure class="step__image image is-active" data-target="image-0">
-                            <video autoplay loop>
-                              <source src="{{ site.baseurl }}/img/why/benefit-dashboard.mp4" type="video/mp4">
-                            </video>
-                        </figure>
-                    </div>
-                    <div class="col-md-6 steps__copyContainer">
-                        <h3>Buy Talent Better</h3>
-                        <p>Talent is your biggest expense. Buy smarter with historical ticket and bar sales.</p>
-                        <ul>
-                            <li class="step is-active" data-target="image-0">
-                                <h4>Measure ad spend impact</h4>
-                            </li>
-                            <li class="step is-active" data-target="image-0">
-                                <h4>Track ticket transfer activity and no show rates Review historicals with Prism</h4>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% endfor %}
+
 </div>
 
 {% include call-to-action.html %}

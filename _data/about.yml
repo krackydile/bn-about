@@ -1,0 +1,69 @@
+intro:
+  list:
+  - name: What is Big Neon?
+    image: /img/about/heart.jpg
+    post: >
+      Big Neon is a modern, mobile first platform that moves beyond just selling tickets to help leading music promoters increase their revenue and compete.
+
+
+      The company is founded by Dan Teree, who co-founded Ticketfly, which was sold to Pandora in 2015 for $450M. Many in the industry have called Big Neon the "spiritual successor" to Ticketfly.
+  - name: Modern, Mobile Ticketing
+    image: /img/about/mobile.jpg
+    post: >
+      Big Neon ushers in the modern era of pure mobile ticketing where beautiful apps replace outmoded hard tickets and long will call lines. With Big Neon, promoters capture more marketing data by giving concert goers a superior mobile experience through seamless ticket transfers and tailored push notifications.
+  - name: Blockchain-enabled
+    image: /img/about/blockchain.jpg
+    post: >
+      Eventually, Big Neon intends to leverage the Tari blockchain [protocol](https://www.tari.com/) so that promoters can capture revenues currently lost in the secondary market. Big Neon’s aim is nothing short of modernizing the way ticketing is done to help our clients compete.
+
+clients:
+  heading: Be in Good Company
+  intro: >
+    Big Neon clients include promoters across the U.S., including:
+  list:
+  - name: The Midway
+    url: https://themidwaysf.com
+    logo: /img/clients/the-midway.png
+  - name: Bimbo's 365 Club
+    url: http://www.bimbos365club.com
+    logo: /img/clients/bimbos.png
+  - name: Public Works
+    url: https://publicsf.com
+    logo: /img/clients/public-works.png
+  - name: The Satellite
+    url: https://www.thesatellitela.com
+    logo: /img/clients/the-satellite.png
+  - name: U Street Presents
+    url: https://www.ustreetmusichall.com
+    logo: /img/clients/u-street.png
+  - name: Gas Monkey
+    url: https://www.gasmonkeybarngrill.com
+    logo: /img/clients/gas-monkey.png
+  - name: Discovery Ventura
+    url: https://www.discoveryventura.com
+    logo: /img/clients/discovery-ventura.png
+  - name: Reverb Concerts
+    url: https://reverbconcerts.com
+    logo: /img/clients/reverb-concerts.png
+
+principles:
+  heading: What's Our Guiding Principles?
+  intro: >
+    You can’t be all things to all people. Big Neon is committed to serving only __one__ client: the music promoter. To ensure focus and deliver the innovation that the music industry craves, Big Neon follows four guiding principles:
+  list:
+    - heading: Dedicated to Music
+      icon: /img/about/principle-music.png
+      post: >
+        Big Neon serves one master - the music promoter. And everyone on the Big Neon team shares an abiding passion for building tools that help promoters succeed, and this includes making the fan experience memorable and fun.
+    - heading: Committed to Listening
+      icon: /img/about/principle-listen.png
+      post: >
+        To improve the way business is done, you need to listen. Big Neon actively collaborates with our clients, ensuring we really solve the problems unique to our industry.
+    - heading: Modern and Mobile
+      icon: /img/about/principle-mobile.png
+      post: >
+        Big Neon is "mobile first," which means everything created is designed to work beautifully on mobile devices. Whether you’re a promoter using our "Studio" tools or a fan using our app to transfer tickets to friends, you’ll notice a modern "look and feel" that is easy to use and helps you get your work (or play!) on.
+    - heading: Beyond Tickets
+      icon: /img/about/principle-tickets.png
+      post: >
+        Selling beer to increase per caps and successfully bidding for talent are critical parts of the live music business. Big Neon moves beyond tickets to deliver features that help music promoters across their entire business.
