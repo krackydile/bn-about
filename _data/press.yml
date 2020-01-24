@@ -1,11 +1,11 @@
 articles:
 - name: Billboard
-  url: https://www.billboard.com/articles/business/8457397/cryptocurrency-blockchain-tari-ticketing-technology
+  url: https://www.bigneon.com
   date: 2018-05-23
-  image: img/press/billboard.jpg
-  lead: Ticketfly Co-Founder Joins Forces With Cryptocurrency Pioneers to Create New Blockchain Protocol
+  image: /img/press/billboard.jpg
+  lead: Lorem ipsums dolor sit amet consectetur adipiscing elit Fusce bibendum neque eget nunc mattis
 - name: Fortune
-  url: http://fortune.com/2018/05/23/crypto-blockchain-monero-ticketfly-project-tari
-  date: 2018-05-23
-  image: img/press/fortune.jpg
-  lead: Ticketfly Cofounder and Monero Ringmaster Start New Blockchain Project
+  url: https://www.bigneon.com
+  date: 2018-05-22
+  image: /img/press/fortune.jpg
+  lead: Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et
