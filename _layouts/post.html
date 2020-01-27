@@ -15,9 +15,9 @@ layout: page
                       </video>
                     </div>
                     {% if page.thumbnail %}
-                      <img src="{{ page.thumbnail }}" />
+                      <img src="{{ page.thumbnail }}" alt="{{ page.title }}" />
                     {% else %}
-                      <img src="/img/blog/placeholder.jpg" />
+                      <img src="/img/blog/placeholder.jpg" alt="{{ page.title }}" />
                     {% endif %}
                 </div>
             </div>

@@ -3,9 +3,9 @@
       <figure class="horizontalGridItem__imageContainer image">
         <a href="{{ post.url }}">
           {% if post.thumbnail %}
-            <img src="{{ post.thumbnail }}" />
+            <img src="{{ post.thumbnail }}" alt="{{ post.title }}" />
           {% else %}
-            <img src="/img/blog/placeholder.jpg" />
+            <img src="/img/blog/placeholder.jpg" alt="{{ post.title }}" />
           {% endif %}
         </a>
       </figure>

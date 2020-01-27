@@ -16,7 +16,7 @@ hero: full
             <div class="row">
                 <div class="col-md-6">
                   <figure class="image">
-                      <img src="{{ item.image }}" />
+                      <img src="{{ item.image }}" alt="{{ item.heading }}" />
                   </figure>
                 </div>
                 <div class="col-md-6">
@@ -69,7 +69,7 @@ hero: full
       {% assign remainder = forloop.index | modulo: 2 %}
       <div class="col-sm-6 col-md-4{% if remainder == 1 %} offset-md-2{% endif %}">
         <div class="service-item">
-          <img src="{{ item.icon }}" />
+          <img src="{{ item.icon }}" alt="{{ item.heading }}" />
           <h3>{{ item.heading }}</h3>
           {{ item.post | markdownify }}
         </div>
